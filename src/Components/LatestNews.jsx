@@ -3,7 +3,7 @@ import MarqueeModule from "react-fast-marquee";
 const Marquee = MarqueeModule.default;
 
 const LatestNews = () => {
-  console.log("Marquee:", Marquee);
+  //console.log("Marquee:", Marquee);
 
   return (
     <div className=" flex w-11/12 mx-auto items-center bg-base-200 rounded-2xl  p-4 py-4 gap-4">
