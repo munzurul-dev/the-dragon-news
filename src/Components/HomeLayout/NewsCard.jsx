@@ -1,7 +1,8 @@
 import { Bookmark, Share2, Eye } from "lucide-react";
+import { Link } from "react-router";
 
 const NewsCard = ({ news }) => {
-  const { title, author, image_url, details, rating, total_view } = news;
+  const { id, title, author, image_url, details, rating, total_view } = news;
 
   const date = new Date(author.published_date);
 
@@ -60,9 +61,9 @@ const NewsCard = ({ news }) => {
       </p>
 
       
-      <button className="mt-1 text-sm font-semibold text-orange-500 hover:text-orange-600">
+      <Link to={`/news-details/${id}`} className="mt-1 text-sm font-semibold text-orange-500 hover:text-orange-600">
         Read More
-      </button>
+      </Link>
 
       <div className="my-4 border-t border-gray-200"></div>
 
