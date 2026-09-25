@@ -9,7 +9,7 @@ const NewsDetails = () => {
     const newsData = useLoaderData();
     const {id }= useParams();
     const [news, setNews] = useState({});
-    console.log(news)
+    //console.log(news)
     useEffect(()=>{
         const fiendNews = newsData.find((singleNews)=> singleNews.id == id);
         // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -19,11 +19,11 @@ const NewsDetails = () => {
         <div className="w-11/12 mx-auto ">
            <Header></Header>
            <main className="grid grid-cols-12 gap-5">
-            <section className="col-span-9" >
+            <section className="col-span-12 md:col-span-8 lg:col-span-9" >
                 <h2 className="font-bold text-2xl">Dragon News</h2>
                 <NewsDetailsCard news={news}></NewsDetailsCard>
             </section>
-            <aside className="col-span-3">
+            <aside className="col-span-3 md:col-span-4 lg:col-span-3 hidden md:flex">
               <RightSide></RightSide>
             </aside>
            </main>

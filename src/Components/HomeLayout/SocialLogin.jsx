@@ -1,9 +1,41 @@
 "react";
 
+import { use } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+
 const SocialLogin = () => {
+  const { signInWithGoogle, signInWithGithub } = use(AuthContext);
+
+  const githubLoginHandle = () => {
+    signInWithGithub()
+      .then(() => {
+       // console.log(result);
+      })
+      .catch(() => {
+       // const errorMessage = error.message;
+       // console.log(errorMessage);
+      });
+    //console.log("button Clicked")
+  };
+  const googleLoginHandle = () => {
+    signInWithGoogle()
+      .then(() => {
+        //console.log(result);
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        console.log(errorMessage);
+      });
+
+    //console.log("button Clicked")
+  };
+
   return (
     <div className="mt-4 space-y-2 grid grid-cols-1">
-      <button className="btn bg-black text-white border-black w">
+      <button
+        onClick={githubLoginHandle}
+        className="btn bg-black text-white border-black w"
+      >
         <svg
           aria-label="GitHub logo"
           width="16"
@@ -19,7 +51,10 @@ const SocialLogin = () => {
         Login with GitHub
       </button>
 
-      <button className="btn bg-white text-black border-[#e5e5e5]">
+      <button
+        onClick={googleLoginHandle}
+        className="btn bg-white text-black border-[#e5e5e5]"
+      >
         <svg
           aria-label="Google logo"
           width="16"

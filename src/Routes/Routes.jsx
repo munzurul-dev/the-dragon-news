@@ -9,6 +9,9 @@ import Resgister from "../Pages/Resgister";
 import About from "../Pages/About";
 import Career from "../Pages/Career";
 import NewsDetails from "../Pages/NewsDetails";
+import PrivetRoute from "../Provider/PrivetRoute";
+import InfoLayout from "../Layout/InfoLayout";
+import Loading from "../Components/Loading";
 
 const router = createBrowserRouter([
   {
@@ -23,16 +26,10 @@ const router = createBrowserRouter([
       {
         path: "categoryNews/:id",
         loader: () => fetch("/news.json"),
+        HydrateFallback: <Loading></Loading>,
         Component: CategoryNews,
       },
-      {
-        path: "/about",
-        Component: About
-      },
-      {
-        path: "/career",
-        Component: Career
-      }
+      
     ],
   },
   {
@@ -53,7 +50,22 @@ const router = createBrowserRouter([
   {
     path:"/news-details/:id",
     loader:()=>fetch("/news.json"),
-    Component: NewsDetails
+     HydrateFallback: <Loading></Loading>,
+   element: <PrivetRoute> <NewsDetails></NewsDetails></PrivetRoute>
+  },
+  {
+    path:"/info",
+    Component: InfoLayout,
+    children:[
+      {
+        path:"/info/about",
+        Component: About
+      },
+      {
+        path: "/info/career",
+        Component: Career
+      }
+    ]
   }
   
 ]);

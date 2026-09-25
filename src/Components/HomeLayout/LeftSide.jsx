@@ -5,7 +5,7 @@ const LeftSide = () => {
   return (
     <div>
       <Categories></Categories>
-      <div className="pr-8">
+      <div className="pr-8 hidden lg:flex">
         {" "}
         <TrendingNews></TrendingNews>
       </div>
