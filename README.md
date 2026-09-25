@@ -1,16 +1,103 @@
-# React + Vite
+🐉 Dragon News
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive news website built with React and Firebase Authentication.
+This is a practice project for learning modern React development,
+authentication, routing, responsive UI, and deployment.
 
-Currently, two official plugins are available:
+🌐 Live Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Visit Dragon News
 
-## React Compiler
+✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+📱 Responsive design
 
-## Expanding the ESLint configuration
+📰 News categories and news cards
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🔎 News details page
+
+🔐 Email/Password authentication
+
+🔵 Google Sign-In
+
+⚫ GitHub Sign-In
+
+👤 Google/GitHub profile photo
+
+🚪 Logout functionality
+
+🛡️ Protected routes
+
+📄 About and Career pages
+
+🔗 Facebook, Instagram and X links
+
+💬 WhatsApp contact button
+
+⚡ Firebase Hosting
+
+🛠️ Technologies
+
+React
+
+Vite
+
+React Router
+
+Tailwind CSS
+
+Firebase Authentication
+
+Firebase Hosting
+
+JavaScript
+
+HTML
+
+CSS
+
+🔐 Authentication
+
+Firebase Authentication is used for:
+
+Email & Password
+
+Google
+
+GitHub
+
+📱 Responsive Design
+
+The website is designed to work across:
+
+Mobile
+
+Tablet
+
+Desktop
+
+🚀 Run Locally
+
+Install dependencies:
+
+npm install
+
+Start the development server:
+
+npm run dev
+
+Create a production build:
+
+npm run build
+
+Deploy to Firebase:
+
+firebase deploy
+
+📌 Project Purpose
+
+Dragon News is a practice project focused on building a responsive React
+news website with Firebase authentication, routing, social login, and
+deployment.
+
+Live Demo: https://dragon-news-stared.web.app/
